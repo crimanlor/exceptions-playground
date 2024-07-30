@@ -85,7 +85,12 @@
 
     <!-- Solo se puede modificar este trozo de código-->
     <script>
-        crowdStrike.updateAntivirus();
+        
+         try {
+            crowdStrike.updateAntivirus();
+        } catch (e) {
+            console.error('Algo ha fallado en el software de CrowdStrike. Contactar con la compañía');
+        }
 
         // NO MODIFICAR a partir de aquí
 
